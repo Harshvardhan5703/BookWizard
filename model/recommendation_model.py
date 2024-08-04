@@ -12,7 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 # Load the dataset
-books = pd.read_csv(r"database\books_new.csv")
+books = pd.read_csv(r"database/books_new.csv")
 
 # Drop rows with missing values
 books.dropna(inplace=True)
@@ -56,11 +56,11 @@ books['Author'] = books['Author'].apply(stem_text)
 books['Tags'] = books['Genre'] + ' ' + books['SubGenre'] + ' ' + books['Author'] 
 
 # Save the preprocessed dataset to a new CSV file
-books.to_csv(r"database\books_preprocessed.csv", index=False)
+books.to_csv(r"database/books_preprocessed.csv", index=False)
 
 
 # Load the preprocessed dataset
-books = pd.read_csv(r"database\books_new_updated.csv")
+books = pd.read_csv(r"database/books_new_updated.csv")
 
 # Create a CountVectorizer object
 cv = CountVectorizer(max_features=1000, stop_words='english')
