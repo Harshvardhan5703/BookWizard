@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 # Load existing users from JSON file
-users_file = r'C:\Users\Harshvardhan\Desktop\BookWizard\users.json'
+users_file = r'users.json'
 if os.path.exists(users_file):
     with open(users_file, 'r') as f:
         file_content = f.read()
