@@ -3,11 +3,15 @@ from model.recommendation_model import recommend
 import pandas as pd
 import json
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 app = Flask(__name__)
 
+
+
+
 # Load existing users from JSON file
-users_file = r'C:\Users\Harshvardhan\Desktop\my_project (2)\my_project\users.json'
+users_file = r'C:\Users\Harshvardhan\Desktop\BookWizard\users.json'
 if os.path.exists(users_file):
     with open(users_file, 'r') as f:
         file_content = f.read()
